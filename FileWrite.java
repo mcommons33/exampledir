@@ -58,14 +58,16 @@ public class FileWrite {
         catch(IOException e){
             e.printStackTrace();
         }
-        // try{
-        //     FileWriter myOtherFilewriter = new FileWriter
-        //     myOtherFilewriter.write("4840 Van Noord Ave.");
+        try{
+            File newDir = new File (".classifiedinfo");
+            newDir.mkdir();
+            FileWriter myOtherFilewriter = new FileWriter (".classifiedinfo/supasecretdata.dat");
+            myOtherFilewriter.write("4840 Van Noord Ave.");
 
-        // }
-        // catch(IOException e){
-        //     e.printStackTrace();
-        // }
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
         
     }
     public static void getFileSize (String fileName){
