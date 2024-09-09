@@ -4,7 +4,7 @@ import java.nio.file.*;
 import java.nio.charset.StandardCharsets;
 
 public class FileWrite {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         String data = "Hello, World!";
         String fileName1 = "example.txt";
         String fileName2 = "example2.txt";
@@ -46,5 +46,22 @@ public class FileWrite {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+        //HW Day 2
+
+        try(FileWriter myFileWriter = new FileWriter(".thesecretpassword.txt")){
+        myFileWriter.write("definetlynotandrewsbankpassword");
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        try(FileWriter myOtherFilewriter = new FileWriter("\\\\wsl.localhost\\Ubuntu\\home\\mcommons33\\exampledir\\.classifiedinfo\\supasecretdata.txt")){
+            myOtherFilewriter.write("4840 Van Noord Ave.");
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        
     }
 }
