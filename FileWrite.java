@@ -50,18 +50,25 @@ public class FileWrite {
 
         //HW Day 2
 
-        try(FileWriter myFileWriter = new FileWriter(".thesecretpassword.txt")){
-        myFileWriter.write("definetlynotandrewsbankpassword");
+        try{
+            FileWriter myFileWriter = new FileWriter(".thesecretpassword.txt");
+            myFileWriter.write("definetly not andrews bank password");
+            getFileSize(".thesecretpassword.txt");
         }
         catch(IOException e){
             e.printStackTrace();
         }
-        try(FileWriter myOtherFilewriter = new FileWriter("\\\\wsl.localhost\\Ubuntu\\home\\mcommons33\\exampledir\\.classifiedinfo\\supasecretdata.txt")){
-            myOtherFilewriter.write("4840 Van Noord Ave.");
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
+        // try{
+        //     FileWriter myOtherFilewriter = new FileWriter
+        //     myOtherFilewriter.write("4840 Van Noord Ave.");
+
+        // }
+        // catch(IOException e){
+        //     e.printStackTrace();
+        // }
         
+    }
+    public static void getFileSize (String fileName){
+        System.out.println("This file is " + fileName.length() + " bytes long");
     }
 }
