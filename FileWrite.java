@@ -69,6 +69,7 @@ public class FileWrite {
             e.printStackTrace();
         }
 
+        printTotalFileSize("file1.txt", "directory1/file2.txt", ".hiddenDirectory/file3.txt");
         
     }
     public static void getFileSize (String fileName){
