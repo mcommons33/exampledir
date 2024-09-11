@@ -68,6 +68,7 @@ public class FileWrite {
         catch(IOException e){
             e.printStackTrace();
         }
+
         
     }
     public static void getFileSize (String fileName){
