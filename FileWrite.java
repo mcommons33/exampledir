@@ -69,9 +69,24 @@ public class FileWrite {
             e.printStackTrace();
         }
 
+        printTotalFileSize("file1.txt", "directory1/file2.txt", ".hiddenDirectory/file3.txt");
         
     }
     public static void getFileSize (String fileName){
         System.out.println("This file is " + fileName.length() + " bytes long");
     }
+
+    private static void printTotalFileSize(String... fileNames) {
+    long totalSize = 0;
+    for (String fileName : fileNames) {
+        File file = new File(fileName);
+        if (file.exists()) {
+            totalSize += file.length();
+        }
+    }
+    System.out.println("Total size of all files: " + totalSize + " bytes");
+
+}
+
+
 }
